@@ -28,7 +28,7 @@ public class WebComponentController implements Serializable {
 	
 	/**
 	 * @author kathiravang
-	 * when the request is invoke that time this method is used to show the home.jsp page in browser
+	 * when the user give the request ( /home ), that time this method will invoke
 	 * @return home.jsp
 	 */
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
@@ -40,7 +40,6 @@ public class WebComponentController implements Serializable {
 		if(LOGGER.isInfoEnabled()) {
 			LOGGER.info("home method invoked");
 		}
-		
 		return "home";
 		
 	}

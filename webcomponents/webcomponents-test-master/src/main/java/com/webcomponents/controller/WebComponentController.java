@@ -34,9 +34,13 @@ public class WebComponentController implements Serializable {
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	public String home() {
 		
+		if(LOGGER.isDebugEnabled()) {
+			LOGGER.debug("home method invoked");
+		}
 		if(LOGGER.isInfoEnabled()) {
 			LOGGER.info("home method invoked");
 		}
+		
 		return "home";
 		
 	}
